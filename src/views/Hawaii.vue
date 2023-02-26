@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-  <div class="home">
-    <h1>Home</h1>
+  <div class="hawaii">
+    <h1>Hawaii</h1>
   </div>
 </template>
