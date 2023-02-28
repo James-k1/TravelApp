@@ -1,9 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router"
-import Home from "@/views/HomeView.vue"
-import Brazil from "@/views/Brazil.vue"
-import Hawaii from "@/views/Hawaii.vue"
-import Jamaica from "@/views/Jamaica.vue"
-import Panama from "@/views/Panama.vue"
+import Home from "@/views/Home.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,24 +10,24 @@ const router = createRouter({
       component: Home,
     },
     {
-      path: "/Brazil",
+      path: "/brazil",
       name: "Brazil",
-      component: Brazil,
+      component: () => import(/* webpackChunkname: sdfsdf */ '@/views/Brazil.vue'),
     },
     {
-      path: "/Hawaii",
+      path: "/hawaii",
       name: "Hawaii",
-      component: Hawaii,
+      component: () => import( /* webpackChunkname: hawaii */ '@/views/Hawaii.vue'),
     },
     {
-      path: "/Jamaica",
+      path: "/jamaica",
       name: "Jamaica",
-      component: Jamaica,
+      component: () => import( /* webpackChunkname: jamaica */ '@/views/Jamaica.vue'),
     },
     {
-      path: "/Panama",
+      path: "/panama",
       name: "Panama",
-      component: Panama,
+      component: () => import( /* webpackChunkname: panama */ '@/views/Panama.vue'),
     },
   ],
 })
