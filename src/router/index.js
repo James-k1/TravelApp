@@ -10,25 +10,11 @@ const router = createRouter({
       component: Home,
     },
     {
-      path: "/brazil",
-      name: "Brazil",
-      component: () => import(/* webpackChunkname: sdfsdf */ '@/views/Brazil.vue'),
-    },
-    {
-      path: "/hawaii",
-      name: "Hawaii",
-      component: () => import( /* webpackChunkname: hawaii */ '@/views/Hawaii.vue'),
-    },
-    {
-      path: "/jamaica",
-      name: "Jamaica",
-      component: () => import( /* webpackChunkname: jamaica */ '@/views/Jamaica.vue'),
-    },
-    {
-      path: "/panama",
-      name: "Panama",
-      component: () => import( /* webpackChunkname: panama */ '@/views/Panama.vue'),
-    },
+      path: "/destination/:id/:slug",
+      name: "destination.show",
+      component: () => import('@/views/DestinationView.vue'),
+      props: router => ({id: parseInt(router.params.id)})
+    }
   ],
 })
 
