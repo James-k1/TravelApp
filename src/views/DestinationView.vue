@@ -20,7 +20,6 @@
         <h2>{{destination.name}}</h2>
         <div class="destination-details">
             <img :src="`/images/${destination.image}`" :alt="destination.name">
-        
             <p>{{ destination.description }}</p>
         </div>
     </section>
