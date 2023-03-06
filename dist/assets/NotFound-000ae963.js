@@ -1,0 +1,1 @@
+import{_ as n,r as a,o as r,c,a as o,m as e,b as s,w as l}from"./index-fb058e29.js";const _={},d=o("h1",null,"Note Found",-1);function u(i,p){const t=a("router-link");return r(),c("div",null,[d,o("p",null,[e(" Oops, we could not find that page. Try going "),s(t,{to:"/"},{default:l(()=>[e(" home")]),_:1})])])}const m=n(_,[["render",u]]);export{m as default};
