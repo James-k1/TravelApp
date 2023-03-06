@@ -1,17 +1,15 @@
 <template>
      <div id="nav">
-      <router-link id="logo" to="/">Vue School Travel App</router-link>
-       <!--
-      <router-link to="/brazil">Brazil</router-link>
-      <router-link to="/hawaii">Hawaii</router-link>
-      <router-link to="/panama">Panama</router-link>
-      <router-link to="/jamaica">Jamaica</router-link> -->
+      <AppLink id="logo" to="/">Vue School Travel App</AppLink>
+
       
     <div class="destinations">
       
-      <router-link v-for="destination in destinations" :key="destination.id" :to="{name: 'destination.show', params: {id: destination.id, slug: destination.slug}}">
+      <AppLink v-for="destination in destinations" :key="destination.id" :to="{name: 'destination.show', params: {id: destination.id, slug: destination.slug}}">
         {{destination.name}}
-      </router-link>
+      </AppLink>
+      <AppLink :to="{name: 'protected'}">Dashboard</AppLink>
+      <AppLink to="https://vueschool.io">Vue School</AppLink>
     </div>
 
     </div>
